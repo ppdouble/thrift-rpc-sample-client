@@ -28,6 +28,13 @@ plugin
                 <version>0.10.0</version>
 ```
 
+source folder and target folder
+
+```xml
+                    <thriftSourceRoot>${basedir}/src/main/resources/thrift</thriftSourceRoot>
+                    <outputDirectory>${basedir}/src/main/java/</outputDirectory>
+```
+
 ## 3. thrift file
 
 The thrift file is the contract between client and server.
