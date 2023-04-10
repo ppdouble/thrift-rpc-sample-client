@@ -1,7 +1,7 @@
-## thrift version
+## 1. thrift version
 0.10.0
 
-## dependences
+## 2. dependences
 
 ```xml
         <dependency>
@@ -28,14 +28,25 @@ plugin
                 <version>0.10.0</version>
 ```
 
-## Using Client
+## 3. thrift file
+
+The thrift file is the contract between client and server.
+
+
+## 4. Create Connection
+
+```java
+        TTransport transport = new TSocket("localhost", 9905);
+```
+
+## 5. Using Client
 
 ```java
         TProtocol protocol = new TBinaryProtocol(transport);
         UserService.Client client = new UserService.Client(protocol);
 ```
 
-## Remote Procedure Call
+## 6. Remote Procedure Call
 
 ```java
         APIResponse apiResponse = client.login(loginRequest);
